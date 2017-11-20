@@ -1,0 +1,2 @@
+(define (sum-of-squares-of-larger-two x y z)
+        (- (+ (square x) (square y) (square z)) (square (if (< (if (< x y) x y) z) (if ( < x y) x y) z)))) 
