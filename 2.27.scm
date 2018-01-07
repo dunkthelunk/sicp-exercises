@@ -1,0 +1,6 @@
+(define (deep-reverse items)
+  (define (deep-reverse-iter src dest)
+    (cond ((null? src) dest)
+          ((pair? (car src)) (deep-reverse-iter (cdr src) (cons (deep-reverse (car src)) dest)))
+          (else (deep-reverse-iter (cdr src) (cons (car src) dest)))))
+  (deep-reverse-iter items '()))
